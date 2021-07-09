@@ -1,0 +1,45 @@
+﻿@model RepositorioGitHub.Dominio.ActionResult<RepositorioGitHub.Dominio.GitHubRepositoryViewModel>
+
+    @{
+        ViewBag.Title = "Detalhe";
+    }
+
+    <h2>Detalhe</h2>
+
+    <table class="table table-striped table-dark">
+        <thead>
+            
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Result.Name)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Result.Description)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Result.Language)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Result.UpdatedAt)
+                </th>
+                
+                <th></th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Repositório</th>
+                <td>@Model.Result.Name</td>
+                <td>@Model.Result.Description</td>
+                <td>@Model.Result.Language</td>
+                <td>@Model.Result.UpdatedAt</td>
+            </tr>
+          
+        </tbody>
+    </table>
+
+    <p>
+      //@Html.ActionLink("Voltar", "Index")
+    </p>
